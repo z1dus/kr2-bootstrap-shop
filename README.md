@@ -44,3 +44,39 @@ kr2-bootstrap-shop/
 ├── README.md
 └── .gitignore
 ```
+
+## Практическая работа 10
+
+Тема: «Страница на Bootstrap: компоненты».
+
+Выполнено:
+
+- добавлена единая Bootstrap-навигация;
+- создана страница каталога `catalog.html`;
+- создана страница товара `product.html`;
+- создана страница заявки `order.html`;
+- использованы компоненты `navbar`, `card`, `btn`, `badge`, `alert`, `modal`, `form-control`, `input-group`, `form-check`, `accordion`;
+- добавлен файл `css/custom.css` для минимальных доработок;
+- проект подготовлен к сдаче контрольной работы №2.
+
+## Структура проекта
+
+```text
+kr2-bootstrap-shop/
+├── index.html          # Главная страница
+├── catalog.html        # Каталог программ и рационов
+├── product.html        # Страница подробного описания программы
+├── order.html          # Форма заявки на составление плана
+├── css/
+│   └── custom.css      # Дополнительные стили проекта
+├── images/
+│   └── hero.jpg        # Изображения проекта
+├── vendor/
+│   └── bootstrap/
+│       ├── css/
+│       │   └── bootstrap.min.css
+│       └── js/
+│           └── bootstrap.bundle.min.js
+├── README.md           # Описание проекта
+└── .gitignore          # Файл исключений Git
+```
