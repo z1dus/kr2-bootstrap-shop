@@ -9,7 +9,6 @@
 </head>
 <body class="bg-light d-flex flex-column min-vh-100">
 
-
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="index.html">No Pain, No Gain</a>
@@ -27,7 +26,7 @@
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Главная</a>
+            <a class="nav-link" aria-current="page" href="index.html">Главная</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="catalog.html">Каталог</a>
@@ -36,29 +35,19 @@
             <a class="nav-link" href="product.html">Программа</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="order.html">Заявка</a>
+            <a class="nav-link" href="about.html">О нас</a>
           </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Цели
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="catalog.html">Похудение и рельеф</a></li>
-              <li><a class="dropdown-item" href="catalog.html">Набор мышечной массы</a></li>
-              <li><a class="dropdown-item" href="catalog.html">Поддержание веса</a></li>
-            </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Контакты</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="order.html">Заявка</a>
+          </li>
+
         </ul>
       </div>
     </div>
   </nav>
-
 
   <main class="container my-5 flex-grow-1">
     <div class="row justify-content-center">
@@ -94,7 +83,9 @@
                     <option selected>Выберите из списка</option>
                     <option value="weight-loss">Сушка и рельеф (Похудение)</option>
                     <option value="mass-gain">Массонабор Pro (Набор массы)</option>
-                    <option value="balance">Баланс и тонус (Поддержание веса)</option>
+                    <option value="balance">Легкий старт (1600 ккал)</option>
+                    <option value="balance">Сила и масса (3000 ккал)</option>
+                    <option value="balance">Домашний фитнес (Без зала)</option>
                   </select>
                 </div>
                 <div class="col-12">
@@ -122,15 +113,50 @@
   </main>
 
 
-  <footer class="bg-dark text-white py-4 mt-5">
+  <footer class="bg-dark text-white pt-5 pb-4 mt-5">
     <div class="container">
-      <div class="row align-items-center g-3">
-        <div class="col-12 col-md-6">
-          <p class="mb-0">&copy; 2026 No Pain, No Gain. Учебный проект.</p>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <h5 class="fw-bold mb-3">No Pain, No Gain</h5>
+          <p class="text-white-50 small mb-0">
+            Персональные программы тренировок и сбалансированные рационы питания для достижения ваших спортивных целей дома и в тренажёрном зале.
+          </p>
         </div>
-        <div class="col-12 col-md-6 text-md-end">
-          <a class="text-white text-decoration-none me-3" href="catalog.html">Каталог</a>
-          <a class="text-white text-decoration-none" href="order.html">Заявка</a>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="text-uppercase fw-bold mb-3">Разделы</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="index.html">Главная</a></li>
+            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="catalog.html">Каталог программ</a></li>
+            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="product.html">Описание программ</a></li>
+            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="order.html">Оформить заявку</a></li>
+            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="contacts.html">Контакты</a></li>
+            <li><a class="text-white-50 text-decoration-none" href="about.html">О нас</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-3">
+          <h6 class="text-uppercase fw-bold mb-3">Контакты</h6>
+          <ul class="list-unstyled text-white-50 small mb-0">
+            <li class="mb-2">Тел.: <a class="text-white text-decoration-none" href="tel:+79991234567">+7 (962) 976-31-97</a></li>
+            <li class="mb-2">Email: <a class="text-white text-decoration-none" href="mailto:info@nopain-nogain.ru">info@nopain-nogain.ru</a></li>
+            <li>Telegram / WhatsApp: @nopain_support</li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <h6 class="text-uppercase fw-bold mb-3">Время работы</h6>
+          <ul class="list-unstyled text-white-50 small mb-0">
+            <li class="mb-1">Пн – Пт: 09:00 – 21:00</li>
+            <li class="mb-1">Сб – Вс: 10:00 – 18:00</li>
+            <li class="text-white mt-2">Онлайн-поддержка тренеров без выходных</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 text-center text-md-start">
+          <p class="text-white-50 small mb-0">&copy; 2026 No Pain, No Gain.</p>
         </div>
       </div>
     </div>
