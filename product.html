@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Сушка и рельеф — No Pain, No Gain</title>
+  <title>Описание программ — No Pain, No Gain</title>
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/custom.css">
 </head>
 <body class="bg-light d-flex flex-column min-vh-100">
-
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
@@ -27,103 +26,419 @@
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Главная</a>
+            <a class="nav-link" aria-current="page" href="index.html">Главная</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="catalog.html">Каталог</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="product.html">Программа</a>
+            <a class="nav-link active" href="product.html">Программа</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">О нас</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacts.html">Контакты</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="order.html">Заявка</a>
           </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Цели
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="catalog.html">Похудение и рельеф</a></li>
-              <li><a class="dropdown-item" href="catalog.html">Набор мышечной массы</a></li>
-              <li><a class="dropdown-item" href="catalog.html">Поддержание веса</a></li>
-            </ul>
-          </li>
+
         </ul>
       </div>
     </div>
   </nav>
-
 
   <main class="container my-5 flex-grow-1">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
         <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Сушка и рельеф</li>
+        <li class="breadcrumb-item active" aria-current="page">Подробное описание программ</li>
       </ol>
     </nav>
 
-    <div class="row g-4 align-items-center">
-      <div class="col-12 col-lg-6">
-        <img 
-          src="images/hero_product1.jpg" 
-          alt="Программа Сушка и рельеф" 
-          class="img-fluid rounded shadow-sm"
-        >
-      </div>
-      <div class="col-12 col-lg-6">
-        <span class="badge bg-success mb-3">Похудение</span>
-        <h1 class="h2">Программа «Сушка и рельеф»</h1>
-        <p class="lead text-muted">
-          Комплексный план на 4 недели для безопасного снижения процента жира с сохранением мышечной массы.
-        </p>
-        <p class="fs-3 fw-bold">1500 руб.</p>
-        <div class="d-flex gap-2 mb-4">
-          <a class="btn btn-primary btn-lg" href="order.html">Оформить заявку</a>
-          <a class="btn btn-outline-secondary btn-lg" href="catalog.html">Назад в каталог</a>
+    <h1 class="h2 mb-3">Выберите программу для просмотра деталей</h1>
+
+    <ul class="nav nav-pills mb-4 gap-2" id="programTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="tab-dry" data-bs-toggle="pill" data-bs-target="#pane-dry" type="button" role="tab" aria-controls="pane-dry" aria-selected="true">Сушка и рельеф</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-mass" data-bs-toggle="pill" data-bs-target="#pane-mass" type="button" role="tab" aria-controls="pane-mass" aria-selected="false">Массонабор Pro</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-balance" data-bs-toggle="pill" data-bs-target="#pane-balance" type="button" role="tab" aria-controls="pane-balance" aria-selected="false">Баланс и тонус</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-diet1600" data-bs-toggle="pill" data-bs-target="#pane-diet1600" type="button" role="tab" aria-controls="pane-diet1600" aria-selected="false">Рацион 1600 ккал</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-diet3000" data-bs-toggle="pill" data-bs-target="#pane-diet3000" type="button" role="tab" aria-controls="pane-diet3000" aria-selected="false">Рацион 3000 ккал</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-home" data-bs-toggle="pill" data-bs-target="#pane-home" type="button" role="tab" aria-controls="pane-home" aria-selected="false">Домашний фитнес</button>
+      </li>
+    </ul>
+
+
+    <div class="tab-content" id="programTabsContent">
+      <!-- 1. Сушка и рельеф -->
+      <div class="tab-pane fade show active" id="pane-dry" role="tabpanel" aria-labelledby="tab-dry">
+  <div class="row g-4 align-items-center">
+    <div class="col-12 col-lg-6">
+      <div id="carouselDry" class="carousel slide rounded overflow-hidden shadow-sm" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselDry" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
+          <button type="button" data-bs-target="#carouselDry" data-bs-slide-to="1" aria-label="Слайд 2"></button>
+          <button type="button" data-bs-target="#carouselDry" data-bs-slide-to="2" aria-label="Слайд 3"></button>
         </div>
-        <div class="alert alert-warning" role="alert">
-          Перед началом интенсивных тренировок рекомендуется проконсультироваться со специалистом.
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/card1_1.png" class="d-block w-100 program-carousel-img" alt="Сушка и рельеф — фото 1">
+          </div>
+          <div class="carousel-item">
+            <img src="images/card1_2.png" class="d-block w-100 program-carousel-img" alt="Сушка и рельеф — фото 2">
+          </div>
+          <div class="carousel-item">
+            <img src="images/card1_3.png" class="d-block w-100 program-carousel-img" alt="Сушка и рельеф — фото 3">
+          </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDry" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Назад</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselDry" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Вперёд</span>
+        </button>
       </div>
     </div>
 
-
-    <section class="mt-5">
-      <h2 class="h4 mb-3">Параметры программы</h2>
-      <div class="table-responsive bg-white">
-        <table class="table table-striped table-bordered align-middle mb-0">
-          <tbody>
-            <tr>
-              <th scope="row">Цель</th>
-              <td>Снижение веса и проработка рельефа</td>
-            </tr>
-            <tr>
-              <th scope="row">Длительность</th>
-              <td>4 недели (12 тренировок)</td>
-            </tr>
-            <tr>
-              <th scope="row">Калорийность рациона</th>
-              <td>1600–1800 ккал/сутки (индивидуальный расчёт)</td>
-            </tr>
-            <tr>
-              <th scope="row">Место занятий</th>
-              <td>Тренажёрный зал или дом (гантели, коврик)</td>
-            </tr>
-          </tbody>
-        </table>
+    <!-- Правая колонка -->
+    <div class="col-12 col-lg-6">
+      <span class="badge bg-success mb-3">Похудение</span>
+      <h2 class="h3">Программа «Сушка и рельеф»</h2>
+      <p class="lead text-muted">Комплексный план на 4 недели для безопасного снижения процента жира с сохранением мышечной массы.</p>
+      <p class="fs-3 fw-bold">1500 руб.</p>
+      <div class="d-flex gap-2 mb-4">
+        <a class="btn btn-primary btn-lg" href="order.html">Оформить заявку</a>
+        <a class="btn btn-outline-secondary btn-lg" href="catalog.html">В каталог</a>
       </div>
-    </section>
+      <div class="alert alert-warning" role="alert">
+        Перед началом интенсивных тренировок рекомендуется проконсультироваться со специалистом.
+      </div>
+    </div>
+  </div>
+        <div class="table-responsive bg-white mt-4">
+          <table class="table table-striped table-bordered align-middle mb-0">
+            <tbody>
+              <tr><th scope="row">Цель</th><td>Снижение веса и проработка рельефа</td></tr>
+              <tr><th scope="row">Длительность</th><td>4 недели (12 тренировок)</td></tr>
+              <tr><th scope="row">Калорийность рациона</th><td>1600–1800 ккал/сутки</td></tr>
+              <tr><th scope="row">Место занятий</th><td>Тренажёрный зал или дом</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 2. Массонабор Pro -->
+      <div class="tab-pane fade" id="pane-mass" role="tabpanel" aria-labelledby="tab-mass">
+        <div class="row g-4 align-items-center">
+<div class="col-12 col-lg-6">
+  <div id="carouselMass" class="carousel slide rounded overflow-hidden shadow-sm" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselMass" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
+      <button type="button" data-bs-target="#carouselMass" data-bs-slide-to="1" aria-label="Слайд 2"></button>
+      <button type="button" data-bs-target="#carouselMass" data-bs-slide-to="2" aria-label="Слайд 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/card2_1.png" class="d-block w-100 program-carousel-img" alt="Массонабор Pro — фото 1">
+      </div>
+      <div class="carousel-item">
+        <img src="images/card2_2.png" class="d-block w-100 program-carousel-img" alt="Массонабор Pro — фото 2">
+      </div>
+      <div class="carousel-item">
+        <img src="images/card2_3.png" class="d-block w-100 program-carousel-img" alt="Массонабор Pro — фото 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselMass" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Назад</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselMass" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Вперёд</span>
+    </button>
+  </div>
+</div>
+
+          <div class="col-12 col-lg-6">
+            <span class="badge bg-warning text-dark mb-3">Хит</span>
+            <h2 class="h3">Программа «Массонабор Pro»</h2>
+            <p class="lead text-muted">Интенсивный силовой сплит на 6 недель для качественного роста мышц и силовых показателей.</p>
+            <p class="fs-3 fw-bold">2000 руб.</p>
+            <div class="d-flex gap-2 mb-4">
+              <a class="btn btn-primary btn-lg" href="order.html">Оформить заявку</a>
+              <a class="btn btn-outline-secondary btn-lg" href="catalog.html">В каталог</a>
+            </div>
+            <div class="alert alert-info" role="alert">
+              Программа рассчитана на занятия в тренажёрном зале со свободными весами.
+            </div>
+          </div>
+        </div>
+        <div class="table-responsive bg-white mt-4">
+          <table class="table table-striped table-bordered align-middle mb-0">
+            <tbody>
+              <tr><th scope="row">Цель</th><td>Набор мышечной массы и рост силовых</td></tr>
+              <tr><th scope="row">Длительность</th><td>6 недель (4 тренировки в неделю)</td></tr>
+              <tr><th scope="row">Калорийность рациона</th><td>2800–3200 ккал/сутки (профицит)</td></tr>
+              <tr><th scope="row">Соотношение БЖУ</th><td>Белки 2 г/кг, Жиры 1 г/кг, Углеводы 4.5 г/кг</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 3. Баланс и тонус -->
+      <div class="tab-pane fade" id="pane-balance" role="tabpanel" aria-labelledby="tab-balance">
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-lg-6">
+  <div id="carouselBalance" class="carousel slide rounded overflow-hidden shadow-sm" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselBalance" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
+      <button type="button" data-bs-target="#carouselBalance" data-bs-slide-to="1" aria-label="Слайд 2"></button>
+      <button type="button" data-bs-target="#carouselBalance" data-bs-slide-to="2" aria-label="Слайд 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/card3_1.png" class="d-block w-100 program-carousel-img" alt="Баланс и тонус — фото 1">
+      </div>
+      <div class="carousel-item">
+        <img src="images/card3_2.png" class="d-block w-100 program-carousel-img" alt="Баланс и тонус — фото 2">
+      </div>
+      <div class="carousel-item">
+        <img src="images/card3_3.png" class="d-block w-100 program-carousel-img" alt="Баланс и тонус — фото 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselBalance" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Назад</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselBalance" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Вперёд</span>
+    </button>
+  </div>
+</div>
+          <div class="col-12 col-lg-6">
+            <span class="badge bg-danger mb-3">Скидка</span>
+            <h2 class="h3">Программа «Баланс и тонус»</h2>
+            <p class="lead text-muted">Поддержание стабильного веса тела, укрепление мышц спины и кора, выработка здоровых пищевых привычек.</p>
+            <p class="fs-3 fw-bold">1200 руб.</p>
+            <div class="d-flex gap-2 mb-4">
+              <a class="btn btn-primary btn-lg" href="order.html">Оформить заявку</a>
+              <a class="btn btn-outline-secondary btn-lg" href="catalog.html">В каталог</a>
+            </div>
+            <div class="alert alert-success" role="alert">
+              Идеально подходит для поддержания формы без жёстких диет и перегрузок.
+            </div>
+          </div>
+        </div>
+        <div class="table-responsive bg-white mt-4">
+          <table class="table table-striped table-bordered align-middle mb-0">
+            <tbody>
+              <tr><th scope="row">Цель</th><td>Поддержание стабильного веса и тонуса</td></tr>
+              <tr><th scope="row">Длительность</th><td>4 недели (3 тренировки Fullbody в неделю)</td></tr>
+              <tr><th scope="row">Калорийность рациона</th><td>Индивидуальная норма поддержания</td></tr>
+              <tr><th scope="row">Инвентарь</th><td>Минимальный (гантели, коврик)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- 4. Рацион 1600 ккал -->
+      <div class="tab-pane fade" id="pane-diet1600" role="tabpanel" aria-labelledby="tab-diet1600">
+  <div class="row g-4 align-items-center">
+    <div class="col-12 col-lg-6">
+      <div id="carouselDiet1600" class="carousel slide rounded overflow-hidden shadow-sm" data-bs-ride="carousel">
+        <!-- Убрали лишнюю скобку > и добавили # перед carouselDiet1600 -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselDiet1600" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
+          <button type="button" data-bs-target="#carouselDiet1600" data-bs-slide-to="1" aria-label="Слайд 2"></button>
+          <button type="button" data-bs-target="#carouselDiet1600" data-bs-slide-to="2" aria-label="Слайд 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/card4_1.png" class="d-block w-100 program-carousel-img" alt="Рацион питания Лёгкий старт — фото 1">
+          </div>
+          <div class="carousel-item">
+            <img src="images/card4_2.png" class="d-block w-100 program-carousel-img" alt="Рацион питания Лёгкий старт — фото 2">
+          </div>
+          <div class="carousel-item">
+            <img src="images/card4_3.png" class="d-block w-100 program-carousel-img" alt="Рацион питания Лёгкий старт — фото 3">
+          </div>
+        </div>
+        <!-- Добавили # перед carouselDiet1600 у обеих кнопок -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDiet1600" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Назад</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselDiet1600" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Вперёд</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <span class="badge bg-info text-dark mb-3">Питание</span>
+      <h2 class="h3">Рацион питания «Лёгкий старт» (1600 ккал)</h2>
+      <p class="lead text-muted">Пошаговый план питания на 14 дней с простыми рецептами и готовым списком продуктов.</p>
+      <p class="fs-3 fw-bold">900 руб.</p>
+      <div class="d-flex gap-2 mb-4">
+        <a class="btn btn-primary btn-lg" href="order.html">Оформить заявку</a>
+        <a class="btn btn-outline-secondary btn-lg" href="catalog.html">В каталог</a>
+      </div>
+      <div class="alert alert-info" role="alert">
+        Возможна замена любых продуктов при наличии аллергии или личных предпочтений.
+      </div>
+    </div>
+  </div>
+
+  <div class="table-responsive bg-white mt-4">
+    <table class="table table-striped table-bordered align-middle mb-0">
+      <tbody>
+        <tr><th scope="row">Калорийность</th><td>1600 ккал в сутки</td></tr>
+        <tr><th scope="row">КБЖУ</th><td>Белки 130 г / Жиры 50 г / Углеводы 155 г</td></tr>
+        <tr><th scope="row">Режим питания</th><td>3 основных приёма пищи + 1 перекус</td></tr>
+        <tr><th scope="row">Время готовки</th><td>Не более 25–30 минут в день</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 
+      <!-- 5. Рацион 3000 ккал -->
+      <div class="tab-pane fade" id="pane-diet3000" role="tabpanel" aria-labelledby="tab-diet3000">
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-lg-6">
+      <div id="carouselDiet3000" class="carousel slide rounded overflow-hidden shadow-sm" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselDiet3000" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
+          <button type="button" data-bs-target="#carouselDiet3000" data-bs-slide-to="1" aria-label="Слайд 2"></button>
+          <button type="button" data-bs-target="#carouselDiet3000" data-bs-slide-to="2" aria-label="Слайд 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/card5_1.png" class="d-block w-100 program-carousel-img" alt="Рацион питания «Сила и масса» — фото 1">
+          </div>
+          <div class="carousel-item">
+            <img src="images/card5_2.png" class="d-block w-100 program-carousel-img" alt="Рацион питания «Сила и масса» — фото 2">
+          </div>
+          <div class="carousel-item">
+            <img src="images/card5_3.png" class="d-block w-100 program-carousel-img" alt="Рацион питания «Сила и масса» — фото 3">
+          </div>
+        </div>
+        <!-- Добавили # перед carouselDiet1600 у обеих кнопок -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDiet3000" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Назад</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselDiet3000" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Вперёд</span>
+        </button>
+      </div>
+    </div>
+          <div class="col-12 col-lg-6">
+            <span class="badge bg-primary mb-3">Новинка</span>
+            <h2 class="h3">Рацион питания «Сила и масса» (3000 ккал)</h2>
+            <p class="lead text-muted">Высокобелковый план питания для набора сухой мышечной массы без перегрузки пищеварения.</p>
+            <p class="fs-3 fw-bold">1100 руб.</p>
+            <div class="d-flex gap-2 mb-4">
+              <a class="btn btn-primary btn-lg" href="order.html">Оформить заявку</a>
+              <a class="btn btn-outline-secondary btn-lg" href="catalog.html">В каталог</a>
+            </div>
+            <div class="alert alert-info" role="alert">
+              Включает рекомендации по спортивному питанию (протеин, креатин).
+            </div>
+          </div>
+        </div>
+        <div class="table-responsive bg-white mt-4">
+          <table class="table table-striped table-bordered align-middle mb-0">
+            <tbody>
+              <tr><th scope="row">Калорийность</th><td>3000 ккал в сутки</td></tr>
+              <tr><th scope="row">КБЖУ</th><td>Белки 190 г / Жиры 85 г / Углеводы 370 г</td></tr>
+              <tr><th scope="row">Режим питания</th><td>4 плотных приёма пищи в день</td></tr>
+              <tr><th scope="row">Длительность меню</th><td>14 дней с повтором цикла</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 6. Домашний фитнес -->
+      <div class="tab-pane fade" id="pane-home" role="tabpanel" aria-labelledby="tab-home">
+  <div class="row g-4 align-items-center">
+    <div class="col-12 col-lg-6">
+      <div id="carouselHome" class="carousel slide rounded overflow-hidden shadow-sm" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
+          <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="1" aria-label="Слайд 2"></button>
+          <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="2" aria-label="Слайд 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/card6_1.png" class="d-block w-100 program-carousel-img" alt="Домашний фитнес — фото 1">
+          </div>
+          <div class="carousel-item">
+            <img src="images/card6_2.png" class="d-block w-100 program-carousel-img" alt="Домашний фитнес — фото 2">
+          </div>
+          <div class="carousel-item">
+            <img src="images/card6_3.png" class="d-block w-100 program-carousel-img" alt="Домашний фитнес — фото 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHome" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Назад</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselHome" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Вперёд</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <span class="badge bg-secondary mb-3">Без зала</span>
+      <h2 class="h3">Программа «Домашний фитнес»</h2>
+      <p class="lead text-muted">Эффективные тренировки дома по 35 минут в день без посещения клуба + правила базового питания.</p>
+      <p class="fs-3 fw-bold">1000 руб.</p>
+      <div class="d-flex gap-2 mb-4">
+        <a class="btn btn-primary btn-lg" href="order.html">Оформить заявку</a>
+        <a class="btn btn-outline-secondary btn-lg" href="catalog.html">В каталог</a>
+      </div>
+      <div class="alert alert-success" role="alert">
+        Не требует тренажёров — достаточно коврика и фитнес-резинок.
+      </div>
+    </div>
+  </div>
+
+  <div class="table-responsive bg-white mt-4">
+    <table class="table table-striped table-bordered align-middle mb-0">
+      <tbody>
+        <tr><th scope="row">Цель</th><td>Снижение веса и тонус мышц дома</td></tr>
+        <tr><th scope="row">Длительность</th><td>4 недели (3–4 тренировки по 35 минут)</td></tr>
+        <tr><th scope="row">Инвентарь</th><td>Коврик для фитнеса и резинки</td></tr>
+        <tr><th scope="row">Уровень подготовки</th><td>Начальный и средний</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+    </div>
+>
     <section class="mt-5">
-      <h2 class="h4 mb-3">Частые вопросы по программе</h2>
+      <h2 class="h4 mb-3">Частые вопросы по программам</h2>
       <div class="accordion" id="faqAccordion">
         <div class="accordion-item">
           <h3 class="accordion-header">
@@ -140,7 +455,7 @@
         <div class="accordion-item">
           <h3 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
-              Подойдёт ли программа новичкам?
+              Подойдут ли программы новичкам?
             </button>
           </h3>
           <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
@@ -153,21 +468,68 @@
     </section>
   </main>
 
-
-  <footer class="bg-dark text-white py-4 mt-5">
+  <footer class="bg-dark text-white pt-5 pb-4 mt-5">
     <div class="container">
-      <div class="row align-items-center g-3">
-        <div class="col-12 col-md-6">
-          <p class="mb-0">&copy; 2026 No Pain, No Gain. Учебный проект.</p>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <h5 class="fw-bold mb-3">No Pain, No Gain</h5>
+          <p class="text-white-50 small mb-0">
+            Персональные программы тренировок и сбалансированные рационы питания для достижения ваших спортивных целей дома и в тренажёрном зале.
+          </p>
         </div>
-        <div class="col-12 col-md-6 text-md-end">
-          <a class="text-white text-decoration-none me-3" href="catalog.html">Каталог</a>
-          <a class="text-white text-decoration-none" href="order.html">Заявка</a>
+
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6 class="text-uppercase fw-bold mb-3">Разделы</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="index.html">Главная</a></li>
+            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="catalog.html">Каталог программ</a></li>
+            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="product.html">Описание программ</a></li>
+            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="order.html">Оформить заявку</a></li>
+            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="contacts.html">Контакты</a></li>
+            <li><a class="text-white-50 text-decoration-none" href="about.html">О нас</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-3">
+          <h6 class="text-uppercase fw-bold mb-3">Контакты</h6>
+          <ul class="list-unstyled text-white-50 small mb-0">
+            <li class="mb-2">Тел.: <a class="text-white text-decoration-none" href="tel:+79629763197">+7 (962) 976-31-97</a></li>
+            <li class="mb-2">Email: <a class="text-white text-decoration-none" href="mailto:info@nopain-nogain.ru">info@nopain-nogain.ru</a></li>
+            <li>Telegram / WhatsApp: @nopain_support</li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <h6 class="text-uppercase fw-bold mb-3">Время работы</h6>
+          <ul class="list-unstyled text-white-50 small mb-0">
+            <li class="mb-1">Пн – Пт: 09:00 – 21:00</li>
+            <li class="mb-1">Сб – Вс: 10:00 – 18:00</li>
+            <li class="text-white mt-2">Онлайн-поддержка тренеров без выходных</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 text-center text-md-start">
+          <p class="text-white-50 small mb-0">&copy; 2026 No Pain, No Gain.</p>
         </div>
       </div>
     </div>
   </footer>
 
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hash = window.location.hash;
+      if (hash) {
+        const targetTab = document.querySelector(`button[data-bs-target="${hash}"]`);
+        if (targetTab) {
+          const tab = new bootstrap.Tab(targetTab);
+          tab.show();
+        }
+      }
+    });
+  </script>
+
 </body>
 </html>

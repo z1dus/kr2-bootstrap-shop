@@ -1,7 +1,274 @@
-body {
+:root {
+  --bg-main: #121417;
+  --bg-card: #1c1f24;
+  --bg-elevated: #252930;
+  --accent: #ff5722;
+  --accent-hover: #e64a19;
+  --accent-glow: rgba(255, 87, 34, 0.22);
+  --text-main: #e6e8ec;
+  --text-muted: #9aa0a8;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+}
+
+body,
+body.bg-light {
   min-height: 100vh;
+  background-color: var(--bg-main) !important;
+  color: var(--text-main) !important;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #f4f6f8;
+  letter-spacing: -0.01em;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.navbar.bg-dark,
+footer.bg-dark {
+  background-color: #0d0f12 !important;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+footer.bg-dark {
+  border-bottom: none;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.navbar-brand {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #ffffff !important;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+
+.breadcrumb-item a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.breadcrumb-item.active,
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--text-muted);
+}
+
+/* Акцентные кнопки */
+.bg-primary,
+.btn-primary {
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
+  box-shadow: 0 4px 14px var(--accent-glow);
+}
+
+.btn-outline-primary {
+  color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  font-weight: 600;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--accent) !important;
+  color: #ffffff !important;
+}
+
+.btn-outline-secondary,
+.btn-outline-dark {
+  color: var(--text-main) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-dark:hover {
+  background-color: var(--bg-elevated) !important;
+  border-color: var(--accent) !important;
+  color: #ffffff !important;
+}
+
+.card {
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 87, 34, 0.45) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45), 0 0 18px var(--accent-glow) !important;
+}
+
+.nav-pills .nav-link {
+  color: var(--text-main);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.nav-pills .nav-link:hover {
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+.nav-pills .nav-link.active {
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+/* Таблицы характеристик */
+.table-responsive.bg-white {
+  background-color: var(--bg-card) !important;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+
+.table {
+  --bs-table-bg: var(--bg-card);
+  --bs-table-color: var(--text-main);
+  --bs-table-striped-bg: #22262c;
+  --bs-table-striped-color: var(--text-main);
+  --bs-table-border-color: var(--border-subtle);
+  color: var(--text-main) !important;
+}
+
+.alert-info,
+.alert-warning,
+.alert-success {
+  background-color: var(--bg-elevated) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-left: 4px solid var(--accent) !important;
+}
+
+.alert-success {
+  border-left-color: #2e7d32 !important;
+}
+
+.form-control,
+.form-select {
+  background-color: var(--bg-elevated) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  color: var(--text-main) !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 0.2rem var(--accent-glow) !important;
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+}
+
+.modal-content,
+.dropdown-menu,
+.accordion-item,
+.accordion-button {
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-subtle) !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--bg-elevated) !important;
+  color: var(--accent) !important;
+}
+
+.dropdown-item {
+  color: var(--text-main) !important;
+}
+
+.dropdown-item:hover {
+  background-color: var(--bg-elevated) !important;
+  color: var(--accent) !important;
 }
 
 .placeholder-box {
   min-height: 240px;
+}
+
+.placeholder-image {
+  min-height: 320px;
+}
+
+.card-carousel-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-img-top {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+}
+
+.program-carousel-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+}
+
+.team-card-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: top;
+}
+
+footer a.text-white-50:hover {
+  color: var(--accent) !important;
+  transition: color 0.2s ease;
+}
+
+.bg-white,
+.card.bg-white,
+section.bg-white {
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-subtle) !important;
+}
+
+a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item):not(.text-white-50):not(.text-white) {
+  color: var(--accent);
+  transition: color 0.2s ease;
+}
+
+a:not(.btn):not(.nav-link):not(.navbar-brand):not(.dropdown-item):not(.text-white-50):not(.text-white):hover {
+  color: #ff8a65;
+}
+
+iframe[src*="yandex"],
+ymaps {
+  filter: invert(92%) hue-rotate(180deg) brightness(95%) contrast(90%);
+  border-radius: 12px;
+}
+
+.text-primary {
+  color: var(--accent) !important;
 }
