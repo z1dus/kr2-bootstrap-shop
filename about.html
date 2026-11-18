@@ -6,6 +6,7 @@
   <title>О нас — No Pain, No Gain</title>
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/theme.css">
 </head>
 <body class="bg-light d-flex flex-column min-vh-100">
 
@@ -43,8 +44,17 @@
           <li class="nav-item">
             <a class="nav-link" href="order.html">Заявка</a>
           </li>
-
         </ul>
+        <button
+  class="btn btn-outline-light theme-toggle ms-lg-3 mt-3 mt-lg-0"
+  type="button"
+  data-theme-toggle
+  aria-label="Включить светлую тему"
+  aria-pressed="false"
+>
+  <span data-theme-icon>🌙</span>
+  <span data-theme-label>Тёмная</span>
+</button>
       </div>
     </div>
   </nav>
@@ -75,7 +85,7 @@
       <div class="col-12 col-lg-6">
         <!-- Используем одну из ваших картинок формата 16:9 -->
         <div class="rounded overflow-hidden shadow-sm">
-          <img src="images/about0.png" class="w-100 program-carousel-img" alt="Команда и тренировки No Pain, No Gain">
+          <img src="images/about0.jpg" class="w-100 program-carousel-img" alt="Команда и тренировки No Pain, No Gain">
         </div>
       </div>
     </div>
@@ -174,7 +184,7 @@
         <!-- Тренер 1 -->
         <div class="col-12 col-md-4">
           <div class="card border-0 shadow-sm h-100">
-            <img src="images/about1.png" class="card-img-top team-card-img" alt="Дмитрий Голубочкин">
+            <img src="images/about1.jpg" class="card-img-top team-card-img" alt="Дмитрий Голубочкин">
             <div class="card-body">
               <h3 class="h5 fw-bold mb-1">Дмитрий Голубочкин</h3>
               <p class="text-primary small fw-semibold mb-2">Главный тренер, силовые программы</p>
@@ -202,7 +212,7 @@
         <!-- Тренер 3 -->
         <div class="col-12 col-md-4">
           <div class="card border-0 shadow-sm h-100">
-            <img src="images/about3.png" class="card-img-top team-card-img" alt="Денис Гусев">
+            <img src="images/about3.jpg" class="card-img-top team-card-img" alt="Денис Гусев">
             <div class="card-body">
               <h3 class="h5 fw-bold mb-1">Денис Гусев</h3>
               <p class="text-primary small fw-semibold mb-2">Специалист по сушке и рельефу</p>
@@ -222,7 +232,7 @@
         <!-- Тренер 4 -->
         <div class="col-12 col-md-4">
           <div class="card border-0 shadow-sm h-100">
-            <img src="images/about4.png" class="card-img-top team-card-img" alt="Виктор Блуд">
+            <img src="images/about4.jpg" class="card-img-top team-card-img" alt="Виктор Блуд">
             <div class="card-body">
               <h3 class="h5 fw-bold mb-1">Виктор Блуд</h3>
               <p class="text-primary small fw-semibold mb-2">Функциональный тренинг и выносливость</p>
@@ -236,7 +246,7 @@
         <!-- Тренер 5 -->
         <div class="col-12 col-md-4">
           <div class="card border-0 shadow-sm h-100">
-            <img src="about5.png" class="card-img-top team-card-img" alt="Ярослав Брин">
+            <img src="images/about5.jpg" class="card-img-top team-card-img" alt="Ярослав Брин">
             <div class="card-body">
               <h3 class="h5 fw-bold mb-1">Ярослав Брин</h3>
               <p class="text-primary small fw-semibold mb-2">Нутрициолог и эксперт по жиросжиганию</p>
@@ -250,7 +260,7 @@
         <!-- Тренер 6 -->
         <div class="col-12 col-md-4">
           <div class="card border-0 shadow-sm h-100">
-            <img src="images/about6.png" class="card-img-top team-card-img" alt="Арина Скоромная">
+            <img src="images/about6.jpg" class="card-img-top team-card-img" alt="Арина Скоромная">
             <div class="card-body">
               <h3 class="h5 fw-bold mb-1">Арина Скоромная</h3>
               <p class="text-primary small fw-semibold mb-2">Тренер по домашнему фитнесу</p>
@@ -311,13 +321,14 @@
       <hr class="border-secondary my-4">
       <div class="row align-items-center">
         <div class="col-12 col-md-6 text-center text-md-start">
-          <p class="text-white-50 small mb-0">&copy; 2026 No Pain, No Gain.</p>
+          <p class="text-white-50 small mb-0">&copy; 2026 No Pain, No Gain. Все права защищены.</p>
         </div>
       </div>
     </div>
   </footer>
 
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/theme.js"></script>
 </body>
 </html>
 
